@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        background-color: #f48a8a;
+        color: white;
+    }
+    #ValentineHeading {
+        font-family: "Century Gothic";
+        font-weight: bold;
+        font-size: 48pt;
+        align-items: center;
+    }
+
+    #ValentineBody{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-family: "Century Gothic";
+    }
+
+    .valButton {
+        margin: 5px;
+        background-color: white;
+        border: none;
+        padding: 16px;
+        font-family: "Century Gothic";
+        font-size: 16pt;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    .valButton:hover {
+        margin: 5px;
+        background-color: red;
+        border: none;
+        padding: 16px;
+        color: white;
+        font-family: "Century Gothic";
+        font-size: 16pt;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    #Hooray {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: red;
+        color: white;
+        font-family: "Century Gothic";
+        visibility: collapse;
+    }
+
+    #OhNo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Century Gothic";
+        visibility: hidden;
+    }
+
+</style>
+<body>
+
+<div id="ValentineHeading" align="center">
+    <header>Will you be my Valentine?</header>
+</div>
+
+<div id="ValentineBody">
+    <button class="valButton" onclick="yes()">Yes?</button>
+    <button class="valButton" onclick="no()">No?</button>
+</div>
+
+<div id="Hooray">
+    <h1>Yahoo!</h1>
+</div>
+
+<div id="OhNo">
+    <p>You have to at least explain why... in 15,000 words or more.</p>
+    <textarea type="text" id="essay" rows="4" cols="50"></textarea>
+    <p>So, will you be my valentine now?</p>
+    <button class="valButton" onclick="yes()">Yes</button>
+</div>
+
+</body>
+
+<!--
+Reflection:
+1. I did not use any AI.
+2. I did not use any AI. But I did use StackOverflow and Mozilla's Developer Documentation. It helped me greatly understand more CSS functions like visibility.
+3. I thought I was not going to use JavaScript, but I did to help it make more sense.
+4. That I don't need to use AI as long as I learn through documentation.
+-->
+<script>
+    function yes(){
+        document.getElementById("Hooray").style.visibility = "visible";
+        document.getElementById("OhNo").style.visibility = "collapse";
+    }
+
+    function no(){
+        document.getElementById("OhNo").style.visibility = "visible";
+        document.getElementById("Hooray").style.visibility = "collapse";
+    }
+</script>
+</html>
